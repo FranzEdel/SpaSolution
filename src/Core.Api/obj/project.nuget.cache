@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "aFnjA6WbRB2TgROEQ83fAUqAqibi0Xnbj5eNJ/pdCKym9tPB7sGg2U8m+qW4kTFCBKmaxXHkEZ3MGmg+OrNDhA==",
+  "success": true,
+  "projectFilePath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/Core.Api.csproj",
+  "expectedPackageFiles": [
+    "/home/franzedel/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
