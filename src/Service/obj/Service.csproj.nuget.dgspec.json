@@ -4,14 +4,14 @@
     "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj": {}
   },
   "projects": {
-    "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj": {
+    "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/Model.DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj",
-        "projectName": "Service",
-        "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj",
+        "projectUniqueName": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/Model.DTOs.csproj",
+        "projectName": "Model.DTOs",
+        "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/Model.DTOs.csproj",
         "packagesPath": "/home/franzedel/.nuget/packages/",
-        "outputPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/obj/",
+        "outputPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/franzedel/.nuget/NuGet/NuGet.Config"
@@ -52,7 +52,187 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj",
+        "projectName": "Model",
+        "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj",
+        "packagesPath": "/home/franzedel/.nuget/packages/",
+        "outputPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/franzedel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/Persistence.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/Persistence.Database.csproj",
+        "projectName": "Persistence.Database",
+        "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/Persistence.Database.csproj",
+        "packagesPath": "/home/franzedel/.nuget/packages/",
+        "outputPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/franzedel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj": {
+                "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj",
+        "projectName": "Service",
+        "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj",
+        "packagesPath": "/home/franzedel/.nuget/packages/",
+        "outputPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/franzedel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/Model.DTOs.csproj": {
+                "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model.DTOs/Model.DTOs.csproj"
+              },
+              "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj": {
+                "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Model/Model.csproj"
+              },
+              "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/Persistence.Database.csproj": {
+                "projectPath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Persistence.Database/Persistence.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

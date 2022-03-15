@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Tools": "6.0.2",
           "Persistence.Database": "1.0.0",
+          "Service": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -485,6 +486,11 @@
           "Model.dll": {}
         }
       },
+      "Model.DTOs/1.0.0": {
+        "runtime": {
+          "Model.DTOs.dll": {}
+        }
+      },
       "Persistence.Database/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.2",
@@ -493,6 +499,16 @@
         },
         "runtime": {
           "Persistence.Database.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "Model": "1.0.0",
+          "Model.DTOs": "1.0.0",
+          "Persistence.Database": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
         }
       }
     }
@@ -851,7 +867,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Model.DTOs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Persistence.Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

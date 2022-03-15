@@ -63,3 +63,7 @@
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/obj/Debug/net6.0/Core.Api.pdb
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/obj/Debug/net6.0/Core.Api.genruntimeconfig.cache
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/obj/Debug/net6.0/ref/Core.Api.dll
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Model.DTOs.dll
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Service.dll
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Service.pdb
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Model.DTOs.pdb

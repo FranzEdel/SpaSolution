@@ -11,8 +11,8 @@ using Persistence.Database;
 namespace Core.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220310005245_MyMigration")]
-    partial class MyMigration
+    [Migration("20220315003409_FirstM")]
+    partial class FirstM
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

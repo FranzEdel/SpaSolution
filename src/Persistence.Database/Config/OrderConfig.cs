@@ -12,17 +12,21 @@ public class OrderConfig
 
         entidad.HasKey(o => o.OrderID);
 
-        entidad.Property(od => od.Iva)
+        entidad.Property(o => o.Iva)
         .IsRequired()
         .HasColumnType("decimal(10,2)");
 
-        entidad.Property(od => od.SubTotal)
+        entidad.Property(o => o.SubTotal)
         .IsRequired()
         .HasColumnType("decimal(10,2)");
 
-        entidad.Property(od => od.Total)
+        entidad.Property(o => o.Total)
         .IsRequired()
         .HasColumnType("decimal(10,2)");
+
+        entidad.HasOne(o => o.Client)
+        .WithMany(o => o.Items)
+        .HasForeignKey(o => o.ClientID);
 
     }
 }

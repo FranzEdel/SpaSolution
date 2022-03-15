@@ -27,5 +27,13 @@ public class OrderDetailConfig
         entidad.Property(od => od.Total)
         .IsRequired()
         .HasColumnType("decimal(10,2)");
+
+        entidad.HasOne(od => od.Order)
+        .WithMany(od => od.Items)
+        .HasForeignKey(od => od.OrderID);
+
+        entidad.HasOne(od => od.Product)
+        .WithMany(od => od.Items)
+        .HasForeignKey(od => od.ProductID);
     }
 }

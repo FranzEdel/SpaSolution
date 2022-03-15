@@ -4,7 +4,7 @@
 
 namespace Core.Api.Migrations
 {
-    public partial class MyMigration : Migration
+    public partial class FirstM : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

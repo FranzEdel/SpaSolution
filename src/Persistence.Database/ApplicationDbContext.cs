@@ -21,61 +21,8 @@ public class ApplicationDbContext : DbContext
 
         new ProductConfig(modelBuilder.Entity<Product>());
 
-        modelBuilder.Entity<Order>(entidad =>
-        {
-            entidad.ToTable("Orders");
+        new OrderConfig(modelBuilder.Entity<Order>());
 
-            entidad.HasKey(o => o.OrderID);
-
-            entidad.Property(od => od.Iva)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-            entidad.Property(od => od.SubTotal)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-            entidad.Property(od => od.Total)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-        });
-
-        modelBuilder.Entity<Order>().HasOne(x => x.Client)
-        .WithMany(p => p.Items)
-        .HasForeignKey(p => p.ClientID);
-
-
-        modelBuilder.Entity<OrderDetail>(entidad =>
-        {
-            entidad.ToTable("OrderDetail");
-
-            entidad.HasKey(od => od.OrderDetailID);
-
-            entidad.Property(od => od.UnitPrice)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-            entidad.Property(od => od.Iva)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-            entidad.Property(od => od.SubTotal)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-
-            entidad.Property(od => od.Total)
-            .IsRequired()
-            .HasColumnType("decimal(10,2)");
-        });
-
-
-        modelBuilder.Entity<OrderDetail>().HasOne(x => x.Order)
-        .WithMany(p => p.Items)
-        .HasForeignKey(p => p.OrderID);
-
-        modelBuilder.Entity<OrderDetail>().HasOne(x => x.Product)
-        .WithMany(p => p.Items)
-        .HasForeignKey(p => p.ProductID);
+        new OrderDetailConfig(modelBuilder.Entity<OrderDetail>());
     }
 }
