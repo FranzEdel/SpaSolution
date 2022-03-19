@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SCPJnyJD+YWjcCcqCIsi9LFuQWgMq7ZCQmPysdfd2FTirShu/UcKllhsimnijX3F/QY6OOduRop3IS1D+K5dZQ==",
+  "dgSpecHash": "hhLeOgFTTdOvqtULjeiHa8ko/KwRMzcia7Siq0CNUuFVk/DrVXW1JMJxUN1HBCyLyA4JHBP8vKxE+AKtUH+B4A==",
   "success": true,
   "projectFilePath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Service/Service.csproj",
   "expectedPackageFiles": [
-    "/home/franzedel/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/franzedel/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/home/franzedel/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "/home/franzedel/.nuget/packages/microsoft.entityframeworkcore/6.0.2/microsoft.entityframeworkcore.6.0.2.nupkg.sha512",

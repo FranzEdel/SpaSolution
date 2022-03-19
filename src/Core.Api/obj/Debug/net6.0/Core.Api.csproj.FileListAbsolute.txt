@@ -67,3 +67,5 @@
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Service.dll
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Service.pdb
 /media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/Model.DTOs.pdb
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/AutoMapper.dll
+/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/Core.Api/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

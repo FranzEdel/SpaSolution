@@ -15,11 +15,22 @@ public class ClientController : ControllerBase
         _clientService = clientService;
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ClientDto>> GetById(int id)
+    {
+        return await _clientService.GetById(id);
+    }
+
     [HttpPost]
     public async Task<ActionResult> Create(ClientCreateDto model)
     {
-        await _clientService.Create(model);
-        return Ok();
+        var result = await _clientService.Create(model);
+
+        return CreatedAtAction(
+            "GetById",
+            new { id = result.ClientID },
+            result
+        );
     }
 
 }
