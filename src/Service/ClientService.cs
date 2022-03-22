@@ -10,6 +10,8 @@ public interface IClientService
 {
     Task<ClientDto> Create(ClientCreateDto model);
     Task<ClientDto> GetById(int id);
+    Task Update(int id, ClientUpdateDto model);
+    Task Remove(int id);
 }
 public class ClientService : IClientService
 {
@@ -37,6 +39,24 @@ public class ClientService : IClientService
         await _context.SaveChangesAsync();
 
         return _mapper.Map<ClientDto>(entry);
+    }
+
+    public async Task Update(int id, ClientUpdateDto model)
+    {
+        var entry = await _context.Client.SingleAsync(c => c.ClientID == id);
+
+        entry.Name = model.Name;
+
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Remove(int id)
+    {
+        _context.Remove(
+            new Client { ClientID = id }
+        );
+
+        await _context.SaveChangesAsync();
     }
 
 }

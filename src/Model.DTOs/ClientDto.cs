@@ -9,3 +9,9 @@ public class ClientDto
     public int ClientID { get; set; }
     public string? Name { get; set; }
 }
+
+public class ClientUpdateDto
+{
+    public int ClientID { get; set; }
+    public string? Name { get; set; }
+}
