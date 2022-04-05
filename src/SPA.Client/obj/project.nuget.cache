@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "bxpjIJR7XuvVMLX2MtHE75n7rHCPpc7AgtxInMKO3ypZSKto6iyRQ/iD7aZLP0TF/RP0pkb72/fszavMsE4gCg==",
+  "dgSpecHash": "RgqrNHRekcgVqOI5m3RbYnpoirx12E7JzZCjIC1ZuSoWpJuY5Cm08bmlv6l0SHFU4afi0E1AruT4+DFvTul99g==",
   "success": true,
   "projectFilePath": "/media/franzedel/Archivos y Tutoriales/Zoom/Programacion III/ProyectoFinal/SpaSolution/src/SPA.Client/SPA.Client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/franzedel/.nuget/packages/microsoft.aspnetcore.spaservices.extensions/6.0.3/microsoft.aspnetcore.spaservices.extensions.6.0.3.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.extensions.fileproviders.abstractions/6.0.0/microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.extensions.fileproviders.physical/6.0.0/microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.extensions.filesystemglobbing/6.0.0/microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/franzedel/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

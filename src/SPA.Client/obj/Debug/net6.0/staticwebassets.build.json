@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uxfcXtOWmGiNBV0aCdoPbt1i6cd/uavydRp/uZFa3TQ=",
+  "Source": "SPA.Client",
+  "BasePath": "_content/SPA.Client",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
