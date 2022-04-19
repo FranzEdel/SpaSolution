@@ -3,11 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.DTOs;
 using Persistence.Database;
+using Service.Commons;
+using Service.Extensions;
 
 namespace Service;
 
 public interface IProductService
 {
+    Task<DataCollection<ProductDto>> GetAll(int page, int take);
     Task<ProductDto> Create(ProductCreateDto model);
     Task<ProductDto> GetById(int id);
     Task Update(int id, ProductUpdateDto model);
@@ -21,6 +24,15 @@ public class ProductService : IProductService
     {
         _context = context;
         _mapper = mapper;
+    }
+
+    public async Task<DataCollection<ProductDto>> GetAll(int page, int take)
+    {
+        return _mapper.Map<DataCollection<ProductDto>>(
+            await _context.Product.OrderByDescending(x => x.ProductID)
+                    .AsQueryable()
+                    .PagedAsync(page, take)
+        );
     }
     public async Task<ProductDto> GetById(int id)
     {

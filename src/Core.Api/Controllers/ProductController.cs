@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 using Service;
+using Service.Commons;
 
 namespace Core.Api.Controllers;
 
@@ -13,6 +14,12 @@ public class ProductController : ControllerBase
     public ProductController(IProductService productService)
     {
         _productService = productService;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<DataCollection<ProductDto>>> GetById(int page, int take = 3)
+    {
+        return await _productService.GetAll(page, take);
     }
 
     [HttpGet("{id}")]
