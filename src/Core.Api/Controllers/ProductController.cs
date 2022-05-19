@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 using Service;
@@ -5,6 +6,7 @@ using Service.Commons;
 
 namespace Core.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class ProductController : ControllerBase
