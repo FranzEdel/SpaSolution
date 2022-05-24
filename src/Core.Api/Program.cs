@@ -28,7 +28,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 var key = Encoding.ASCII.GetBytes(
-    "name=SecretKey"
+    builder.Configuration.GetValue<string>("SecretKey")
 );
 
 builder.Services.AddAuthentication(x =>
@@ -51,6 +51,8 @@ builder.Services.AddAuthentication(x =>
 builder.Services.AddTransient<IClientService, ClientService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
+
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -67,9 +69,8 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

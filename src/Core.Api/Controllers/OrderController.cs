@@ -1,3 +1,4 @@
+using Core.Api.Commons;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
@@ -6,7 +7,7 @@ using Service.Commons;
 
 namespace Core.Api.Controllers;
 
-[Authorize]
+[Authorize(Roles = RoleHelper.Admin + "," + RoleHelper.Seller)]
 [ApiController]
 [Route("[controller]")]
 public class OrderController : ControllerBase

@@ -1,11 +1,13 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using Model.DTOs;
 using Model.Identity;
+using Microsoft.Extensions.Configuration;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Core.Api.Commons;
 
 namespace Core.Api.Controllers;
 
@@ -31,17 +33,21 @@ public class IdentityController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Create(ApplicationUserRegisterDto model)
     {
-        var result = await _userManager.CreateAsync(
-            new ApplicationUser
-            {
-                Email = model.Email,
-                UserName = model.Email
-            }, model.Password
-        );
+        var user = new ApplicationUser
+        {
+            Email = model.Email,
+            UserName = model.Email,
+            FirstName = model.FirstName,
+            LastName = model.LastName
+        };
+
+        var result = await _userManager.CreateAsync(user, model.Password);
+
+        await _userManager.AddToRoleAsync(user, RoleHelper.Seller);
 
         if (!result.Succeeded)
         {
-            throw new Exception("No se pudo registrar el usuario");
+            throw new Exception("No se pudo crear el Usuario");
         }
 
         return Ok();
@@ -57,29 +63,42 @@ public class IdentityController : ControllerBase
         if (check.Succeeded)
         {
             return Ok(
-                GenerateToken(user)
+               await GenerateToken(user)
             );
         }
         else
         {
-            return BadRequest("acceso no valido al Sistema.");
+            return BadRequest("Acceso no valido al sistema.");
         }
 
+        //return Ok();
     }
 
-    private string GenerateToken(ApplicationUser user)
+    private async Task<string> GenerateToken(ApplicationUser user)
     {
         var secretKey = _configuration.GetValue<string>("SecretKey");
         var key = Encoding.ASCII.GetBytes(secretKey);
 
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id),
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(ClaimTypes.Name, user.FirstName),
+            new Claim(ClaimTypes.Surname, user.LastName)
+        };
+
+        var roles = await _userManager.GetRolesAsync(user);
+
+        foreach (var role in roles)
+        {
+            claims.Add(
+                new Claim(ClaimTypes.Role, role)
+            );
+        }
+
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new Claim[]{
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Email, user.Email)
-                //new Claim(ClaimTypes.Name, user.FirstName),
-                //new Claim(ClaimTypes.Surname, user.LastName),
-            }),
+            Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddDays(1),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
